@@ -31,6 +31,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent,"release")
+            output.outputFile = new File(
+                    output.outputFile,
+                    "${variant.productFlavors[0].name}-${variant.buildType.name}-${variant.versionName}.apk".toLowerCase())
+        }
+    }
+    productFlavors {
+        xiaomi {
+        }
+    }
 }
 
 dependencies {
