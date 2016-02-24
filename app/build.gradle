@@ -42,6 +42,14 @@ android {
     productFlavors {
         xiaomi {
         }
+        baidu {
+        }
+    }
+}
+
+task mytask << {
+    exec {
+        commandLine '../gradlew', 'assembleRelease'
     }
 }
 
