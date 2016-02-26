@@ -1,30 +1,24 @@
-package com.example.caizenghui.gradleuse;
+package com.example.caizenghui.gradleuse.exclude;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
-import com.example.caizenghui.gradleuse.exclude.ExcludeActivity;
+import com.example.caizenghui.gradleuse.R;
 
-public class XiaomiMainActivity extends AppCompatActivity implements View.OnClickListener {
+public class ExcludeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        TextView tv_flavor = (TextView) findViewById(R.id.tv_flavor);
-        tv_flavor.setText("MainActivity-->" + "XiaomiMainActivity");
+        setContentView(R.layout.activity_exclude);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_exclude, menu);
         return true;
     }
 
@@ -41,15 +35,5 @@ public class XiaomiMainActivity extends AppCompatActivity implements View.OnClic
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_exclude:
-                Intent intent = new Intent(this, ExcludeActivity.class);
-                startActivity(intent);
-                break;
-        }
     }
 }
