@@ -19,6 +19,8 @@ public class BaiduMainActivity extends AppCompatActivity implements View.OnClick
 
         TextView tv_flavor = (TextView) findViewById(R.id.tv_flavor);
         tv_flavor.setText("MainActivity-->" + "BaiduMainActivity");
+
+        findViewById(R.id.btn_exclude).setOnClickListener(this);
     }
 
     @Override

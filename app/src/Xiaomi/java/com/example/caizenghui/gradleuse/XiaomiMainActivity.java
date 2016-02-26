@@ -19,6 +19,8 @@ public class XiaomiMainActivity extends AppCompatActivity implements View.OnClic
 
         TextView tv_flavor = (TextView) findViewById(R.id.tv_flavor);
         tv_flavor.setText("MainActivity-->" + "XiaomiMainActivity");
+
+        findViewById(R.id.btn_exclude).setOnClickListener(this);
     }
 
     @Override
