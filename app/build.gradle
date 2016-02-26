@@ -48,8 +48,10 @@ android {
     }
     productFlavors {
         xiaomi {
+            applicationId "com.example.caizenghui.gradleuse.xiaomi"
         }
         baidu {
+            applicationId "com.example.caizenghui.gradleuse.baidu"
         }
     }
 }
