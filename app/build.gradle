@@ -17,6 +17,8 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        resValue "string", "app_name", "GradleUse"
     }
     buildTypes {
         release {
@@ -49,9 +51,11 @@ android {
     productFlavors {
         xiaomi {
             applicationId "com.example.caizenghui.gradleuse.xiaomi"
+            resValue "string", "app_name", "GradleUse_xiaomi"
         }
         baidu {
             applicationId "com.example.caizenghui.gradleuse.baidu"
+            resValue "string", "app_name", "GradleUse_baidu"
         }
     }
 }
