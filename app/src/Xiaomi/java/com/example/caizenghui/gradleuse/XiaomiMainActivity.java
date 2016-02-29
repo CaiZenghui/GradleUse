@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.caizenghui.gradleuse.activity.BaseMainActivity;
+
 import utils.IntentUtils;
 
 public class XiaomiMainActivity extends BaseMainActivity implements View.OnClickListener {

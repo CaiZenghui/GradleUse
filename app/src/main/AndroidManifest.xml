@@ -23,13 +23,19 @@
             android:label="@string/title_activity_exclude" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="exclude"
                     android:scheme="gradle" />
             </intent-filter>
-
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
+            android:label="@string/title_activity_splash" >
         </activity>
     </application>
 
