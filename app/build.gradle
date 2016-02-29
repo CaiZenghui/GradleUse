@@ -49,9 +49,9 @@ android {
                     "${variant.productFlavors[0].name}-${variant.buildType.name}-${variant.versionName}.apk".toLowerCase())
         }
 
-        if (variant.productFlavors[0].name.contains('xiaomi')){
+        if (variant.productFlavors[0].name.equals('xiaomi')){
             variant.javaCompile.source = variant.javaCompile.source.filter { p ->
-                return !p.getPath().contains('exclude')
+                return !p.getPath().contains('/exclude/')
             }
         }
     }
