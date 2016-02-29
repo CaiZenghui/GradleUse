@@ -1,14 +1,13 @@
 package com.example.caizenghui.gradleuse;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-
-import com.example.caizenghui.gradleuse.exclude.ExcludeActivity;
 
 public class XiaomiMainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -49,7 +48,8 @@ public class XiaomiMainActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_exclude:
-                Intent intent = new Intent(this, ExcludeActivity.class);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("gradle://exclude"));
+//                Intent intent = new Intent(this, ExcludeActivity.class);
                 startActivity(intent);
                 break;
         }

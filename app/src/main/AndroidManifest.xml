@@ -18,7 +18,17 @@
         </activity>
         <activity
             android:name=".exclude.ExcludeActivity"
+            android:exported="false"
             android:label="@string/title_activity_exclude" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="exclude"
+                    android:scheme="gradle" />
+            </intent-filter>
+
         </activity>
     </application>
 
