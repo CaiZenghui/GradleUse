@@ -29,7 +29,6 @@ public class XiaomiMainActivity extends BaseMainActivity implements View.OnClick
         switch (v.getId()) {
             case R.id.btn_exclude:
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("gradle://exclude"));
-//                Intent intent = new Intent(this, ExcludeActivity.class);
                 IntentUtils.startActivity(this, intent);
                 break;
         }

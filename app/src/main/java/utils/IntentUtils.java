@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 
 import java.util.List;
 
@@ -29,6 +30,15 @@ public class IntentUtils {
     }
 
     public static void startActivity(Activity activity, Intent intent) {
+        if (isIntentAvailable(activity, intent)) {
+            activity.startActivity(intent);
+        } else {
+            ToastUtils.showToast("invalid intent");
+        }
+    }
+
+    public static void startActivity(Activity activity, String action) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(action));
         if (isIntentAvailable(activity, intent)) {
             activity.startActivity(intent);
         } else {

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.caizenghui.gradleuse" >
+    package="com.example.caizenghui.gradleuse">
 
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name="${MAIN_ACTIVITY}"
-            android:label="@string/app_name" >
+            android:name=".SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,24 +19,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".exclude.ExcludeActivity"
+            android:name="${MAIN_ACTIVITY}"
             android:exported="false"
-            android:label="@string/title_activity_exclude" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
-                    android:host="exclude"
+                    android:host="main"
                     android:scheme="gradle" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
-            android:label="@string/title_activity_splash" >
+            android:name=".exclude.ExcludeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_exclude">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="exclude"
+                    android:scheme="gradle" />
+            </intent-filter>
         </activity>
     </application>
 

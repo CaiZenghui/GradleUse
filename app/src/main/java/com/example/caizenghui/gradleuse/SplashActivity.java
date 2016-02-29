@@ -1,10 +1,12 @@
 package com.example.caizenghui.gradleuse;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class SplashActivity extends AppCompatActivity {
+import utils.IntentUtils;
+
+public class SplashActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +15,14 @@ public class SplashActivity extends AppCompatActivity {
 
         TextView tv = (TextView) findViewById(R.id.tv);
         tv.setText(BuildConfig.FLAVOR);
+
+        tv.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                IntentUtils.startActivity(SplashActivity.this,"gradle://main");
+                finish();
+            }
+        },1000);
     }
 
 }

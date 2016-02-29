@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.caizenghui.gradleuse.activity.BaseMainActivity;
+
 import utils.IntentUtils;
 
 public class BaiduMainActivity extends BaseMainActivity implements View.OnClickListener{
@@ -27,7 +29,6 @@ public class BaiduMainActivity extends BaseMainActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.btn_exclude:
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("gradle://exclude"));
-//                Intent intent = new Intent(this, ExcludeActivity.class);
                 IntentUtils.startActivity(this, intent);
                 break;
         }
