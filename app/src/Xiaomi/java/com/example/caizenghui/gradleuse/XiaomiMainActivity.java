@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import utils.IntentUtils;
+
 public class XiaomiMainActivity extends BaseMainActivity implements View.OnClickListener {
 
     @Override
@@ -26,7 +28,7 @@ public class XiaomiMainActivity extends BaseMainActivity implements View.OnClick
             case R.id.btn_exclude:
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("gradle://exclude"));
 //                Intent intent = new Intent(this, ExcludeActivity.class);
-                startActivity(intent);
+                IntentUtils.startActivity(this, intent);
                 break;
         }
     }
