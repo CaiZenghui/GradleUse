@@ -1,9 +1,11 @@
-package com.example.caizenghui.gradleuse;
+package com.example.caizenghui.gradleuse.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.caizenghui.gradleuse.R;
 
 public class BaseMainActivity extends AppCompatActivity {
 
