@@ -8,6 +8,12 @@ android {
             storeFile file('/Users/caizenghui/Documents/keystore_gradleuse.jks')
             storePassword '123456'
         }
+        debug {
+            keyAlias 'GradleUseDebug'
+            keyPassword '123456'
+            storeFile file('keystore_gradle_debug.jks')
+            storePassword '123456'
+        }
     }
     compileSdkVersion 23
     buildToolsVersion "22.0.1"
@@ -27,6 +33,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
             zipAlignEnabled true
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
