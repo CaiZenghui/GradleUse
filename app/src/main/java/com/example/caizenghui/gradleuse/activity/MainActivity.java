@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.caizenghui.barscanner.BarScannerActivity;
 import com.example.caizenghui.gradleuse.R;
 import com.example.caizenghui.share.BaseMainActivity;
+import com.google.zxing.client.android.CaptureActivity;
 
 import utils.IntentUtils;
 
@@ -24,7 +24,7 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_barscanner:{
-                IntentUtils.startActivity(this, new Intent(this, BarScannerActivity.class));
+                IntentUtils.startActivity(this, new Intent(this, CaptureActivity.class));
                 break;
             }
         }
