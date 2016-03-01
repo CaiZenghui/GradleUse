@@ -3,9 +3,9 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            keyAlias 'gradleusealias'
+            keyAlias 'GradleUseRelease'
             keyPassword '123456'
-            storeFile file('/Users/caizenghui/Documents/keystore_gradleuse.jks')
+            storeFile file('keystore_gradle_release.jks')
             storePassword '123456'
         }
         debug {
