@@ -19,10 +19,10 @@ public class SplashActivity extends Activity {
         tv.postDelayed(new Runnable() {
             @Override
             public void run() {
-                IntentUtils.startActivity(SplashActivity.this,"gradle://main");
+                IntentUtils.startActivity(SplashActivity.this, "gradle://main");
                 finish();
             }
-        },1000);
+        }, 1000);
     }
 
 }

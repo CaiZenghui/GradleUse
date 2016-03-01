@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.example.caizenghui.barscanner.BarScannerActivity;
 import com.example.caizenghui.gradleuse.R;
+import com.example.caizenghui.share.BaseMainActivity;
 
 import utils.IntentUtils;
 

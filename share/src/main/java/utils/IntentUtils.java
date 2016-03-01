@@ -33,7 +33,7 @@ public class IntentUtils {
         if (isIntentAvailable(activity, intent)) {
             activity.startActivity(intent);
         } else {
-            ToastUtils.showToast("invalid intent");
+            ToastUtils.showToast(activity, "invalid intent");
         }
     }
 
@@ -42,7 +42,7 @@ public class IntentUtils {
         if (isIntentAvailable(activity, intent)) {
             activity.startActivity(intent);
         } else {
-            ToastUtils.showToast("invalid intent");
+            ToastUtils.showToast(activity, "invalid intent");
         }
     }
 }

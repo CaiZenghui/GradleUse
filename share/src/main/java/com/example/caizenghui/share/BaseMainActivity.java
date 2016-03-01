@@ -1,11 +1,9 @@
-package com.example.caizenghui.gradleuse.activity;
+package com.example.caizenghui.share;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.example.caizenghui.gradleuse.R;
 
 public class BaseMainActivity extends AppCompatActivity {
 
@@ -17,7 +15,7 @@ public class BaseMainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_base_main, menu);
         return true;
     }
 

@@ -1,1 +1,1 @@
-include ':app', ':barscanner'
+include ':app', ':barscanner', ':share'
