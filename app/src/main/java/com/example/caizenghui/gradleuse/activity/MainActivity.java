@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.caizenghui.gradleuse.R;
+import com.example.caizenghui.gradleuse.wxapi.WXEntryActivity;
 import com.example.caizenghui.share.BaseMainActivity;
 
 import utils.IntentUtils;
@@ -17,6 +18,7 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.btn_barscanner).setOnClickListener(this);
+        findViewById(R.id.btn_weixin).setOnClickListener(this);
     }
 
     @Override
@@ -24,6 +26,10 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
         switch (v.getId()){
             case R.id.btn_barscanner:{
                 IntentUtils.startActivity(this, new Intent(this, com.google.zxing.client.android.MainActivity.class));
+                break;
+            }
+            case R.id.btn_weixin:{
+                IntentUtils.startActivity(this, new Intent(this, WXEntryActivity.class));
                 break;
             }
         }

@@ -68,6 +68,7 @@ android {
             applicationId "com.example.caizenghui.gradleuse"
             resValue "string", "app_name", "GradleUse"
             manifestPlaceholders = [ MAIN_ACTIVITY:"com.example.caizenghui.gradleuse.activity.MainActivity"]
+//            manifestPlaceholders = [ MAIN_ACTIVITY:"com.example.caizenghui.gradleuse.wxapi.WXEntryActivity"]
         }
         xiaomi {
             applicationId "com.example.caizenghui.gradleuse.xiaomi"
