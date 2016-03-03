@@ -1,1 +1,1 @@
-include ':app', ':share', ':zxing'
+include ':app', ':share', ':zxing', ':weixinbase'

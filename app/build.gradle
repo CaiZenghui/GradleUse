@@ -67,7 +67,8 @@ android {
         common {
             applicationId "com.example.caizenghui.gradleuse"
             resValue "string", "app_name", "GradleUse"
-            manifestPlaceholders = [ MAIN_ACTIVITY:"com.example.caizenghui.gradleuse.activity.MainActivity"]
+//            manifestPlaceholders = [ MAIN_ACTIVITY:"com.example.caizenghui.gradleuse.activity.MainActivity"]
+            manifestPlaceholders = [ MAIN_ACTIVITY:"com.example.caizenghui.gradleuse.wxapi.WXEntryActivity"]
         }
         xiaomi {
             applicationId "com.example.caizenghui.gradleuse.xiaomi"
@@ -93,4 +94,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile project(':share')
     compile project(':zxing')
+    compile project(':weixinbase')
 }
