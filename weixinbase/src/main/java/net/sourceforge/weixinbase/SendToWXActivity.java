@@ -55,12 +55,6 @@ public class SendToWXActivity extends Activity {
 		initView();
 	}
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		Toast.makeText(this,"---->"+Constants.APP_ID,Toast.LENGTH_LONG).show();
-	}
-
 	private void initView() {
 
 		isTimelineCb = (CheckBox) findViewById(R.id.is_timeline_cb);
@@ -104,7 +98,7 @@ public class SendToWXActivity extends Activity {
 
 						// 调用api接口发送数据到微信
 						api.sendReq(req);
-						finish();
+//						finish();
 					}
 				}, null);
 			}
