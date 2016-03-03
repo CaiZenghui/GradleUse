@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.caizenghui.gradleuse.R;
-import com.example.caizenghui.gradleuse.wxapi.WXEntryActivity;
 import com.example.caizenghui.share.BaseMainActivity;
+
+import net.sourceforge.weixinbase.WXMainActivity;
 
 import utils.IntentUtils;
 
@@ -29,7 +30,7 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
                 break;
             }
             case R.id.btn_weixin:{
-                IntentUtils.startActivity(this, new Intent(this, WXEntryActivity.class));
+                IntentUtils.startActivity(this, new Intent(this, WXMainActivity.class));
                 break;
             }
         }
