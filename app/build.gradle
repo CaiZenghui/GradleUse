@@ -33,6 +33,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
             zipAlignEnabled true
+            debuggable true
         }
         debug {
             signingConfig signingConfigs.debug
@@ -80,7 +81,7 @@ android {
             resValue "string", "app_name", "GradleUse_baidu"
             manifestPlaceholders = [MAIN_ACTIVITY: "com.example.caizenghui.gradleuse.BaiduMainActivity"]
         }
-        wx {
+        wxdifid {
             applicationId "com.example.caizenghui.gradleusedebug"
             resValue "string", "app_name", "weixin"
             manifestPlaceholders = [MAIN_ACTIVITY: "com.example.caizenghui.gradleuse.activity.MainActivity"]
