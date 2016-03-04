@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.Toast;
 
-import com.example.caizenghui.gradleuse.R;
 import com.tencent.mm.sdk.openapi.BaseReq;
 import com.tencent.mm.sdk.openapi.BaseResp;
 import com.tencent.mm.sdk.openapi.ConstantsAPI;
@@ -20,6 +19,7 @@ import com.tencent.mm.sdk.openapi.WXMediaMessage;
 
 import net.sourceforge.weixinbase.Constants;
 import net.sourceforge.weixinbase.GetFromWXActivity;
+import net.sourceforge.weixinbase.R;
 import net.sourceforge.weixinbase.ShowFromWXActivity;
 
 public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
