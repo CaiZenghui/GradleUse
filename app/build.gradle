@@ -101,4 +101,5 @@ dependencies {
     compile project(':share')
     compile project(':zxing')
     compile project(':weixinbase')
+    compile project(':alibase')
 }

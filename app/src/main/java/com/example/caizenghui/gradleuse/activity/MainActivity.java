@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alipay.sdk.pay.demo.PayDemoActivity;
 import com.example.caizenghui.gradleuse.R;
 import com.example.caizenghui.share.BaseMainActivity;
 
@@ -20,6 +21,7 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
 
         findViewById(R.id.btn_barscanner).setOnClickListener(this);
         findViewById(R.id.btn_weixin).setOnClickListener(this);
+        findViewById(R.id.btn_ali_pay).setOnClickListener(this);
     }
 
     @Override
@@ -31,6 +33,10 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
             }
             case R.id.btn_weixin:{
                 IntentUtils.startActivity(this, new Intent(this, WXMainActivity.class));
+                break;
+            }
+            case R.id.btn_ali_pay:{
+                IntentUtils.startActivity(this, new Intent(this, PayDemoActivity.class));
                 break;
             }
         }
