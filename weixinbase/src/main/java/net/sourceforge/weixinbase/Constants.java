@@ -2,7 +2,8 @@ package net.sourceforge.weixinbase;
 
 public class Constants {
     // APP_ID 替换为你的应用从官方网站申请到的合法appId
-    public static final String APP_ID = "wx4f85782122dabe7d";
+//    public static final String APP_ID = "wx4f85782122dabe7d";
+    public static final String APP_ID = "wx436bf40413a3e9df";
 
     public static class ShowMsgActivity {
         public static final String STitle = "showmsg_title";
