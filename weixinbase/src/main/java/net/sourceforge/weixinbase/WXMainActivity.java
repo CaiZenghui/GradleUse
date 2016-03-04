@@ -31,8 +31,8 @@ public class WXMainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // 将该app注册到微信
-                IWXAPI api = WXAPIFactory.createWXAPI(WXMainActivity.this, Constants.APP_ID, false);
-                api.registerApp(Constants.APP_ID);
+                IWXAPI api = WXAPIFactory.createWXAPI(WXMainActivity.this, Constants.getWXAppId(WXMainActivity.this), false);
+                api.registerApp(Constants.getWXAppId(WXMainActivity.this));
             }
         });
 
@@ -51,7 +51,7 @@ public class WXMainActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                IWXAPI api = WXAPIFactory.createWXAPI(WXMainActivity.this, Constants.APP_ID, false);
+                IWXAPI api = WXAPIFactory.createWXAPI(WXMainActivity.this, Constants.getWXAppId(WXMainActivity.this), false);
                 Toast.makeText(WXMainActivity.this, "launch result = " + api.openWXApp(), Toast.LENGTH_LONG).show();
             }
         });
@@ -61,7 +61,7 @@ public class WXMainActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                IWXAPI api = WXAPIFactory.createWXAPI(WXMainActivity.this, Constants.APP_ID, false);
+                IWXAPI api = WXAPIFactory.createWXAPI(WXMainActivity.this, Constants.getWXAppId(WXMainActivity.this), false);
                 int wxSdkVersion = api.getWXAppSupportAPI();
                 if (wxSdkVersion >= TIMELINE_SUPPORTED_VERSION) {
                     Toast.makeText(WXMainActivity.this, "wxSdkVersion = " + Integer.toHexString(wxSdkVersion) + "\ntimeline supported", Toast.LENGTH_LONG).show();

@@ -31,7 +31,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        api = WXAPIFactory.createWXAPI(this, Constants.APP_ID, false);
+        api = WXAPIFactory.createWXAPI(this, Constants.getWXAppId(this), false);
         api.handleIntent(getIntent(), this);
     }
 

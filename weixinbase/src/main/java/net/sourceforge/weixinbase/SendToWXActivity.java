@@ -49,7 +49,7 @@ public class SendToWXActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID);
+		api = WXAPIFactory.createWXAPI(this, Constants.getWXAppId(this));
 
 		setContentView(R.layout.send_to_wx);
 		initView();
