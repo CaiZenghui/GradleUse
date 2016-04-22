@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.caizenghui.gradleuse.R;
+import com.example.caizenghui.intentservice.IntentServiceMainActivity;
 import com.example.caizenghui.share.BaseMainActivity;
 
 import net.sourceforge.weixinbase.WXMainActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
 
         findViewById(R.id.btn_barscanner).setOnClickListener(this);
         findViewById(R.id.btn_weixin).setOnClickListener(this);
+        findViewById(R.id.btn_intent_service).setOnClickListener(this);
     }
 
     @Override
@@ -31,6 +33,10 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
             }
             case R.id.btn_weixin:{
                 IntentUtils.startActivity(this, new Intent(this, WXMainActivity.class));
+                break;
+            }
+            case R.id.btn_intent_service:{
+                IntentUtils.startActivity(this, new Intent(this, IntentServiceMainActivity.class));
                 break;
             }
         }
