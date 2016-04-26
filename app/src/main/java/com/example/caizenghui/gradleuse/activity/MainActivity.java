@@ -22,6 +22,7 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
         findViewById(R.id.btn_barscanner).setOnClickListener(this);
         findViewById(R.id.btn_weixin).setOnClickListener(this);
         findViewById(R.id.btn_intent_service).setOnClickListener(this);
+        findViewById(R.id.btn_include_merge_viewstub).setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +38,10 @@ public class MainActivity extends BaseMainActivity implements View.OnClickListen
             }
             case R.id.btn_intent_service:{
                 IntentUtils.startActivity(this, new Intent(this, IntentServiceMainActivity.class));
+                break;
+            }
+            case R.id.btn_include_merge_viewstub:{
+                IntentUtils.startActivity(this, new Intent(this, com.example.caizenghui.merge_include_viewstub.MainActivity.class));
                 break;
             }
         }
