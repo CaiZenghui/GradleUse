@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int i = v.getId();
         if (i == R.id.btn_include) {
             startActivity(new Intent(this,IncludeActivity.class));
+        }else if (i == R.id.btn_merge){
+            startActivity(new Intent(this,MergeActivity.class));
         }
     }
 }
