@@ -29,5 +29,10 @@
         android:text="include_merge_viewstub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_bounce_view"
+        android:text="bounce_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

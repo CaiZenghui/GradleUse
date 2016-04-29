@@ -103,4 +103,5 @@ dependencies {
     compile project(':weixinbase')
     compile project(':intentservice')
     compile project(':merge_include_viewstub')
+    compile project(':bounceview')
 }
