@@ -2,6 +2,7 @@ package com.caizenghui.ontrimmemory;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class OnTrimMemoryMainActivity extends AppCompatActivity {
 
@@ -15,5 +16,10 @@ public class OnTrimMemoryMainActivity extends AppCompatActivity {
     @Override
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
+        switch (level){
+            case TRIM_MEMORY_UI_HIDDEN:
+                Log.d("onTrimMemory","----------- TRIM_MEMORY_UI_HIDDEN ----------------");
+                break;
+        }
     }
 }
