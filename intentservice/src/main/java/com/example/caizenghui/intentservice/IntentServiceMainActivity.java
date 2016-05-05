@@ -18,12 +18,16 @@ public class IntentServiceMainActivity extends Activity implements View.OnClickL
         findViewById(R.id.btn_start_service).setOnClickListener(this);
 
     }
-
+    Intent intent ;
     @Override
     public void onClick(View v) {
+        if (intent ==null){
+            intent = new Intent(this, MyIntentService.class);
+        }
         int i = v.getId();
         if (i == R.id.btn_start_service) {
-            Intent intent = new Intent(this, MyIntentService.class);
+            startService(intent);
+            startService(intent);
             startService(intent);
         }
     }
