@@ -15,7 +15,7 @@ android {
             storePassword '123456'
         }
     }
-    compileSdkVersion 15
+    compileSdkVersion 23
     buildToolsVersion "22.0.1"
     defaultConfig {
         applicationId "com.example.caizenghui.gradleuse"
@@ -104,4 +104,5 @@ dependencies {
     compile project(':intentservice')
     compile project(':merge_include_viewstub')
     compile project(':bounceview')
+    compile project(':ontrimmemory')
 }
